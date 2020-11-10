@@ -5,7 +5,7 @@
 		<title>第二章2.2</title>
 	</head>
 	<body>
-		<script>
+		<script type="text/javascript">
 			// NaN = not a number
 			// 用parseInt函数转换以下内容
 			document.write("用parseInt函数转换:"+"<br />");
@@ -30,6 +30,22 @@
 			document.write(isNaN("2.34")+"<br />")
 			document.write(isNaN(" ")+"<br />")
 			document.write(isNaN("wh")+"<br />")
+			
+			//用eval（）函数计算出表达式的计算结果
+			function calc(){
+				var express=document.getElementById("info").value;
+				var result=eval(express);
+				alert("输入在文本框中的表达式的结果是："+result+"<br />");
+			}
+			
+			
 		</script>
+		
+		<!-- 这是script里面最后一点“用eval（）函数”的按钮 -->
+		<input type="text" id="info" />
+		<input type="button" value="计算" id="btn" onclick="calc()" />
+		<br />
+		
+		
 	</body>
 </html>
