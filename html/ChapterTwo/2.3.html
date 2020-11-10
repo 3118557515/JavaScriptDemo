@@ -5,41 +5,6 @@
 		<title></title>
 	</head>
 	<body>
-		<!-- onclick事件，鼠标单机触发事件 -->
-		<!-- 三种方式： -->
-
-		<!-- 第一种方式：调用函数 -->
-		<button id="btn1" onclick="updateStyle()">按钮1</button>
-
-		<!-- 第二种方式：使用匿名函数 -->
-		<button id="btn2">按钮2</button>
-
-		<!-- 第三种方式：直接写在点击属性里面 -->
-		<button id="btn3" onclick="this.style.fontSize='24px'">按钮3</button>
-
-		<script>
-			// 用于修改 按钮1 样式的函数
-			function updateStyle() {
-				document.getElementById("btn1").style.background = "greenyellow";
-				document.getElementById("btn1").style.fontSize = "24px";
-				document.getElementById("btn1").style.color = "red";
-			}
-			// 用于修改 按钮2 样式的函数
-			var btn2Var = document.getElementById("btn2");
-			btn2Var.onclick = function() {
-				btn2Var.style.color = "royalblue";
-				btn2Var.style.fontSize = "24px";
-			}
-		</script>
-
-
-
-
-
-
-
-
-
 		<!-- onchange点击事件 -->
 		<h4>请选择一个背景颜色:
 			<select id="selectBgColor">
