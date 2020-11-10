@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第二章2.1</title>
+	</head>
+	<body>
+		<script>
+			/*
+			 一、写个方法，用于获取圆的面积 
+			 */
+			
+			function getArea(R) {
+				document.write("圆的面积是：" + (3.1415926 * R * R) + "<br />")
+			}
+			getArea(40);
+			
+			
+			// 有返回值的函数
+			function getArea2() {
+				return "猪儿虫";
+			}
+			document.write(getArea2() + "<br />");
+			
+			
+			// 通过匿名函数给变量赋值
+			var Area = function() {
+				return "把函数的值赋给变量";
+			};
+			//通过变量名调用匿名函数，并输出
+			document.write(Area());
+			
+		</script>
+	</body>
+</html>
