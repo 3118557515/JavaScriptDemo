@@ -8,9 +8,12 @@
 	<body>
 		<!-- 提交表单后跳转到2.3.html页面，onsubmit等于true就跳转，等于false就阻止跳转，在下面的代码中是等于verification函数的返回值 -->
 		<form action="2.3.html" onsubmit="return verification()">
-			<input id="userName" type="text" />
+			<!-- onkeypress用于监听键盘点击事件 -->
+			<input id="userName" type="text" onkeypress="keyFun()" />
 			<br />
-			<input id="userPsw" type="password" />
+			<br />
+			<input id="userPsw" type="password" onkeypress="keyFun()" />
+			<br />
 			<br />
 			<input type="reset" />
 			<input type="submit" value="登录"/>
@@ -28,6 +31,14 @@
 				}else{
 					alert("请输入账户和密码")
 					return false;
+				}
+			}
+			
+			/* 写一个方法，获取用户点击的键盘值，判断是否是点击的enter键 */
+			function keyFun(){
+				let key=event.keyCode;
+				if(key==13){
+					verification();
 				}
 			}
 		</script>
