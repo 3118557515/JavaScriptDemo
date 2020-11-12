@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	
+	
+	<body onkeydown="keydown(event)" onkeyup="keyup(event)" onkeypress="keypress(event)">
+		
+		
+		
+		<!-- onkeydown键盘事件记录的是按下键盘时该按键对应的ASCII码值 -->
+		<h1 id="down">(down)键盘上按下了：</h1>
+		<script>
+			function keydown(event){
+				document.getElementById("down").innerHTML+=String.fromCharCode(event.keyCode);
+			}
+		</script>
+		
+		
+		
+		
+		<!-- onkeyup键盘事件记录的是松开键盘时该按键对应的ASCII码值 -->
+		<h1 id="up">(up)键盘上松开了：</h1>
+		<script>
+			function keyup(event){
+				document.getElementById("up").innerHTML+=String.fromCharCode(event.keyCode);
+			}
+		</script>
+		
+		
+		
+		
+		
+		<!-- onkeypress键盘事件记录的是按下键盘时该按钮实际在键盘上的值，例如按下a，记录的值就是a，按下A记录的就是A，按下1记录的就是1 -->
+		<h1 id="press">（press）键盘上按下了：</h1>
+		<script>
+			function keypress(event){
+				document.getElementById("press").innerHTML+=String.fromCharCode(event.keyCode);
+			}
+		</script>
+	</body>
+</html>
