@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			// ruduce函数的作用是：前两个元素进行计算，计算结果再与下一个元素进行相同的计算，再把计算结果再与下一个元素进行相同的计算，以此类推
+			
+			let arry=[1,2,3,4,5,6];
+			
+			let a=arry.reduce((x,y)=>x+y);
+			document.write(a+"<br />");
+			
+			let b=arry.reduce((x,y)=>x-y);
+			document.write(b+"<br />");
+			
+			let c=arry.reduce((x,y)=>x*y);
+			document.write(c+"<br />");
+		</script>
+	</body>
+</html>
