@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// setTimeout  延时处理事件
+			setTimeout("alert('给你弹个广告（5秒倒计时完了弹出）')",5000);
+			
+			// setInterval  循环延时处理事件
+			var num=0;
+			function write(){
+				num++;
+				document.write(num+"\n");
+			}
+			setInterval("write()",0)
+			
+		</script>
+	</body>
+</html>

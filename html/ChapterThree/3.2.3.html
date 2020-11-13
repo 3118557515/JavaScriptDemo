@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="closeSelf()">关闭本窗口</button>
+		<button onclick="closeNewWin()">关闭刚才新打开的窗口</button>
+		<script>
+			// open/close
+			let value2 =confirm("需要跳转到新界面吗？");
+			
+			if(value2){
+				var newWin= window.open("../ChapterTwo/2.3.html", "tag", "width = 500, height = 400");
+			}
+			
+			function closeSelf(){
+				window.close();
+			}
+			function closeNewWin(){
+				newWin.close();
+			}
+		</script>
+	</body>
+</html>
