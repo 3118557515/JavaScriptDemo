@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<!-- history对象 -->
+	<body>
+		<a href="javascript:window.history.back()">回退(back)</a>
+		<br />
+		
+		<a href="javascript:window.history.forward()">前进(forward)</a>
+		<br />
+		
+		<a href="javascript:window.history.go(-1)">回退(go(-1))</a>
+		<br />
+		
+		<a href="javascript:window.history.go(1)">前进(go(1))</a>
+		<br />
+		
+		<button onclick="backFun()">回退</button>
+		<script>
+			function backFun(){
+				window.history.go(-1);
+			}
+		</script>
+		
+	</body>
+</html>
