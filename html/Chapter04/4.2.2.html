@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 通过name查找HTML元素 -->
+		<table border="1">
+			<tr>
+				<th> <input type="checkbox" id="allCheck" onchange="check()" /> 全选</th>
+				<th>项目</th>
+				<th>状态</th>
+				<th>数量</th>
+				<th>单价</th>
+				<th>小计</th>
+			</tr>
+			<tr>
+				<td> <input type="checkbox" name="item" onchange="checkItem()" /> </td>
+				<td>Apple iPhoneX</td>
+				<td>可购买</td>
+				<td>1</td>
+				<td>8388.00</td>
+				<td>8388.00</td>
+			</tr>
+			<tr>
+				<td> <input type="checkbox" name="item" onchange="checkItem()" /> </td>
+				<td>小米10Ultra</td>
+				<td>可购买</td>
+				<td>1</td>
+				<td>6999.00</td>
+				<td>6999.00</td>
+			</tr>
+		</table>
+		<script>
+			
+			// 全选框的改变事件调用的方法
+			function check(){
+				// 通过id获取全选框这个元素
+				var cb1=document.getElementById("allCheck");
+				// 通过name获取其他选项的元素组成的数组
+				var chs=document.getElementsByName("item");
+				// for循环，同步全选框和其他选项框的状态
+				for (var i = 0; i < chs.length; i++) {
+					// checked方法返回的是选择框的状态，true是选中，false是未选中，下面的代码是把全选框的选择状态赋值给其他所有选项
+					chs[i].checked=cb1.checked;
+				}
+			}
+			
+			// 其他选择框的改变事件调用的方法
+			function checkItem(){
+				// 定义,记录选中的数量
+				var checked=0;
+				
+				// 通过id获取全选框这个元素
+				var cb1=document.getElementById("allCheck");
+				// 通过name获取其他选项的元素组成的数组
+				var chs=document.getElementsByName("item");
+				
+				// for循环记录其他选择框的选中状态的改变
+				for (var i = 0; i < chs.length; i++) {
+					// 如果是选中的，选中变量+1
+					if(chs[i].checked){
+						checked++;
+					}
+				}
+				
+				// 如果选中的数量等于整个数组的长度，代表全部选中，全选框的选择状态变成选中
+				if(checked==chs.length){
+					cb1.checked=true;
+				}else{
+					cb1.checked=false;
+				}
+			}
+		</script>
+	</body>
+</html>
