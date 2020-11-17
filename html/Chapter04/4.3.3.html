@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<!-- 使用document对象改变HTML样式【.style】 -->
+	<body>
+		
+		<h1 id="text01">这是个标题</h1>
+		
+		选择标题颜色：
+		<select id="sel" onchange="updateColor()">
+			<option id="op01" value="red">红色</option>
+			<option id="op02" value="pink">粉色</option>
+			<option id="op03" value="blue">蓝色</option>
+		</select>
+		
+		<script>
+			
+			function updateColor(){
+				text01.style.color=sel.value;
+			}
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<!-- 使用documen对象改变HTML内容【.innerHTML】 -->
+	<body>
+		<button id="btn01" onclick="on()">点我让王渣航变长</button>
+		<h1 id="text01">我是王渣航</h1>
+		
+		<script>
+			
+			let text=document.getElementById("text01");
+			
+			function on(){
+				text.innerHTML+="我又变长了！";
+			}
+			
+		</script>
+	</body>
+</html>

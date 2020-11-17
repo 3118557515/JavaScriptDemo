@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<!-- 使用document对象改变HTML属性 -->
+	<body>
+		
+		<input type="text" id="text01" />
+		
+		<button id="btn01" onclick="updateText()">点我改变文本框内容</button>
+		
+		<script>
+			
+			function updateText(){
+				text01.value="今天你吃了吗？";
+			}
+			
+		</script>
+		
+		<br />
+		<br />
+		<br />
+		
+		<!-- 点击按钮切换图片 -->
+		<img id="img01" src="../picture/u=3363295869,2467511306&fm=26&gp=0.jpg"/>
+		
+		<button id="btn02" onclick="updatePicture()">点我改变图片</button>
+		
+		<script>
+			
+			// 定义一个标志变量，判断后改变图片的src
+			var flag=0;
+			
+			function updatePicture(){
+				if(flag==0){
+					img01.src="../picture/下载.jpg";
+					flag++;
+				}else{
+					img01.src="../picture/u=3363295869,2467511306&fm=26&gp=0.jpg";
+					flag=0;
+				}
+					
+			}
+			
+		</script>
+	</body>
+</html>
