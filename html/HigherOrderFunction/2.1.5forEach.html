@@ -5,10 +5,16 @@
 		<title></title>
 	</head>
 	<body>
+		
 		<!-- forEach函数可以用来遍历数组 -->
 		<script>
-			var arry=[1,2,3,4,5,6]
-			arry.forEach(x=>document.write(x*x));
+			var arry = [1, 2, 3, 4, 5, 6]
+
+		// 只传一个参数，传数组中的元素
+			arry.forEach(x => document.write(x * x + "\n"));
+
+		// 传两个参数，第一个是数组中的元素，第二个是元素的下标
+			arry.forEach((element, index) => document.write("元素是：" + element + "元素下标是：" + index));
 		</script>
 	</body>
 </html>
