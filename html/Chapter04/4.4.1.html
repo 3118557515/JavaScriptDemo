@@ -5,18 +5,44 @@
 		<title></title>
 	</head>
 	<body>
+
+		<!-- 
 		<div id="div01">
 			<p>第一个</p>
 			<p>第二个</p>
 			<button>第三个</button>
-		</div>
+		</div> -->
+
+
+		<ul id="ul01">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+
+
 		<script>
-			let nodes=div01.childNodes;
-			for(let i=0;i<nodes.length;i++){
-				if(nodes[i].nodeType==1){
-					nodes[i].innerHTML="元素节点";
+			// let nodes=div01.childNodes;
+			// for(let i=0;i<nodes.length;i++){
+			// 	if(nodes[i].nodeType==1){
+			// 		nodes[i].innerHTML="元素节点";
+			// 		nodes[i].style.color="deepskyblue";
+			// 	}
+			// }
+
+			let ul01 = document.getElementById("ul01");
+			let ul01s = ul01.childNodes;
+			ul01s.forEach((element, index) => {
+				if (element.nodeType == 1) {
+						element.style.background = "red";
 				}
-			}
+
+			})
 		</script>
 	</body>
 </html>

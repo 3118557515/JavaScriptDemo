@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<table id="table01" border="1">
+			<th>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>年龄</td>
+				<td>班级</td>
+				<td>电话</td>
+				<td>操作</td>
+			</th>
+		</table>
+		
+		<input id="nameText" type="text" placeholder="请输入姓名" />
+		<select id="selSex">
+			<option>男</option>
+			<option>女</option>
+		</select>
+		<input id="ageText" type="text" placeholder="请输入年龄" />
+		<input id="classText" type="text" placeholder="请输入班级" />
+		<input id="phoneText" type="text" placeholder="请输入手机号" />
+		<button id="addBtn" onclick="addElement()">插入数据</button>
+		
+		<script>
+			function addElement(){
+				let nameText=document.getElementById("nameText").value;
+			}
+		</script>
+	</body>
+</html>
